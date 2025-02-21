@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VYBE Terms and Conditions</title>
+    <!-- Import Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffb6c1;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .terms-box {
+            background-color: white;
+            border-radius: 50px;
+            padding: 40px 25px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border: 3px solid #ff7b8b;
+        }
+        
+        h1 {
+            color: #ff4d67;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        h2 {
+            color: #ff4d67;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        p, ul {
+            color: #444;
+            line-height: 1.5;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        ul {
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .final-declaration {
+            font-style: italic;
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #fff0f3;
+            border-radius: 10px;
+        }
+        
+        .agreement-section {
+            margin-top: 30px;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #ffccd5;
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .checkbox-container input {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+            accent-color: #ff4d67;
+        }
+        
+        .checkbox-label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .continue-button {
+            background-color: #cccccc;
+            color: #666666;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: not-allowed;
+            transition: all 0.3s ease;
+        }
+        
+        .continue-button.active {
+            background-color: #ff4d67;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media (max-width: 480px) {
+            .terms-box {
+                padding: 25px 15px;
+                border-radius: 30px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+            
+            h2 {
+                font-size: 15px;
+            }
+            
+            p, ul {
+                font-size: 13px;
+            }
+        }
+    </style>
+    <script>
+        function toggleButton() {
+            const checkbox = document.getElementById('agree-checkbox');
+            const button = document.getElementById('continue-button');
+            
+            if (checkbox.checked) {
+                button.classList.add('active');
+                button.disabled = false;
+            } else {
+                button.classList.remove('active');
+                button.disabled = true;
+            }
+        }
+        
+        function proceedToMatching() {
+            window.location.href = 'matching.html';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="terms-box">
+            <h1>VYBE Matchmaking Disclaimer & Terms of Participation</h1>
+            
+            <p>By participating in VYBE's matchmaking process and events, you acknowledge and agree to the following terms:</p>
+            
+            <h2>1. Purpose of the Matchmaking Process</h2>
+            <ul>
+                <li>The matchmaking process is designed solely to pair participants based on the responses provided in the questionnaire.</li>
+                <li>Matches are generated using a proprietary algorithm developed for the event and are intended for engagement during the event only.</li>
+                <li>The organizers' role is strictly limited to facilitating the match at the event.</li>
+            </ul>
+            
+            <h2>2. Data Usage & Privacy</h2>
+            <ul>
+                <li>The responses you provide in the questionnaire will be used exclusively for the purpose of matching you with a potential partner at the event.</li>
+                <li>Your data will also be used for internal research to analyze matching patterns, improve our algorithm, and enhance future matchmaking experiences.</li>
+                <li>Your personal data will not be shared, sold, or used for any purpose other than matchmaking within the event and research to refine our system.</li>
+                <li>All information collected will be handled in accordance with applicable data protection laws.</li>
+            </ul>
+            
+            <h2>3. Post-Match Responsibility</h2>
+            <ul>
+                <li>Once matched, it is the participants' sole discretion and responsibility to decide how they wish to proceed with their match beyond the event.</li>
+                <li>VYBE, its organizers, founders, and affiliates assume no responsibility for any interactions, relationships, or outcomes that arise after the event.</li>
+            </ul>
+            
+            <h2>4. Indemnity & Liability</h2>
+            <ul>
+                <li>By participating, you acknowledge that VYBE and its organizers are not liable for any personal, emotional, financial, or social consequences arising from your participation in the event or any interactions thereafter.</li>
+                <li>You agree to indemnify and hold harmless the organizers, founders, volunteers, and any associated personnel from any claims, disputes, or issues that may arise from your participation.</li>
+                <li>The organization does not guarantee compatibility, relationship success, or personal safety beyond the event. It is your responsibility to exercise judgment and caution in your interactions.</li>
+            </ul>
+            
+            <h2>5. Voluntary Participation</h2>
+            <ul>
+                <li>Your participation in this event is completely voluntary, and by submitting this form, you confirm that you are doing so of your own free will.</li>
+                <li>You acknowledge that the matchmaking process is based on a set of psychological and personality-based questions, and while the algorithm is designed to optimize matches, the final decision on how to proceed with your match is yours.</li>
+            </ul>
+            
+            <div class="final-declaration">
+                <p><strong>Final Declaration</strong></p>
+                <p>"I understand and accept all the above terms. I acknowledge that VYBE's role is limited to matchmaking at the event, and I take full responsibility for my interactions. I agree to indemnify the organizers from any claims, disputes, or liabilities arising from my participation. I voluntarily submit my responses and look forward to vibing with my perfect match!"</p>
+            </div>
+            
+            <div class="agreement-section">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="agree-checkbox" onchange="toggleButton()">
+                    <label for="agree-checkbox" class="checkbox-label">I agree to the terms and conditions</label>
+                </div>
+                
+                <button id="continue-button" class="continue-button" disabled onclick="proceedToMatching()">
+                    Continue to Matching
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

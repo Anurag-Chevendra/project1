@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vybe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="question-container">
+            <h1 id="question"></h1>
+            <form id="question-form" action="/submit" method="POST">
+                <div id="input-container">
+                    <input type="text" id="answer" name="answer" placeholder="Your answer" style="display: none;">
+                    <div id="radio-container" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value=0>0</label>
+                            <label><input type="radio" name="scale" value=1>1</label>
+                            <label><input type="radio" name="scale" value=2>2</label>
+                            <label><input type="radio" name="scale" value=3>3</label>
+                            <label><input type="radio" name="scale" value=4>4</label>
+                            <label><input type="radio" name="scale" value=5>5</label>
+                        </div>
+                        <div class="scale-label">(1 being least interested)</div>
+                    </div>
+                    <div id="radio-container-introvert" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value=0>Introvert</label>
+                            <label><input type="radio" name="scale" value=1>Ambivert</label>
+                            <label><input type="radio" name="scale" value=2>Other</label>
+                        </div>
+                    </div>
+                    <!-- For stress handling -->
+                    <div id="radio-container-stress" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value=0>Stay calm</label>
+                            <label><input type="radio" name="scale" value=1>Get overwhelmed</label>
+                            <label><input type="radio" name="scale" value=2>Avoid stress entirely</label>
+                            
+                        </div>
+                    </div>
+
+                    <!-- Do you prefer routine and structure, or are you spontaneous? -->
+                    <div id="radio-container-routine-and-structure" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value=0>Strongly structured</label>
+                            <label><input type="radio" name="scale" value=1>Balanced</label>
+                            <label><input type="radio" name="scale" value=2>Very spontaneous</label>
+                        </div>
+                    </div>
+                    <!--How do you express emotions in a relationship?-->
+                    <div id="radio-container-emotions" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value=0>I share openly</label>
+                            <label><input type="radio" name="scale" value=1>Reserved but thoughtful</label>
+                            <label><input type="radio" name="scale" value=2>Struggle to express </label>
+                        </div>
+                    </div>
+                    <!--Which of these means the most to you in a relationship?-->
+                    <div id="radio-container-love-lang" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale1" value="WA">Words of Affirmation</label>
+                            <label><input type="radio" name="scale2" value="AS">Acts of service</label>
+                            <label><input type="radio" name="scale3" value="RG">Receiving gifts</label>
+                            <label><input type="radio" name="scale4" value="QT">Quality Time</label>
+                            <label><input type="radio" name="scale5" value="PT">Physical Touch</label>
+                        </div>
+                        <div class="scale-label">(Multiple-allowed)</div>
+                    </div>
+                    <!--How do you like to express affection to your partner?-->
+                    <div id="radio-container-exp-affection" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale1" value="0">Verbal Compliments</label>
+                            <label><input type="radio" name="scale2" value="1">Helping with tasks</label>
+                            <label><input type="radio" name="scale3" value="2">Surprising with gifts</label>
+                            <label><input type="radio" name="scale4" value="3">Spending time together</label>
+                            <label><input type="radio" name="scale5" value="4">Physical intimacy</label>
+                        </div>
+                        <div class="scale-label">(Multiple-allowed)</div>
+                    </div>
+                    <!--What’s your idea of a perfect romantic gesture?-->
+                    <div id="radio-container-romantic-gesture" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale1" value="0">Writing a heartfelt note</label>
+                            <label><input type="radio" name="scale2" value="1">Planning a surprise outing</label>
+                            <label><input type="radio" name="scale3" value="2">Giving a thoughtful gift</label>
+                            <label><input type="radio" name="scale4" value="3">Spending quite time together</label>
+                        </div>
+                        <div class="scale-label">(Multiple-allowed)</div>
+                    </div>
+                    <!--How do you feel about commitment in relationships?-->
+                    <div id="radio-container-commitment" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value="0">I value long-term commitment</label>
+                            <label><input type="radio" name="scale" value="1">I'm open to casual relationships</label>
+                            <label><input type="radio" name="scale" value="2">I'm unsure</label>
+                        </div>
+                    </div>
+                    <!--What is your greatest fear in relationships?-->
+                    <div id="radio-container-fear" style="display: none;">
+                        <div class="radio-options">
+                            <label><input type="radio" name="scale" value="0">Being abandoned</label>
+                            <label><input type="radio" name="scale" value="1">Losing independence</label>
+                            <label><input type="radio" name="scale" value="2">Being misunderstood</label>
+                            <label><input type="radio" name="scale" value="3">Other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-button-container">
+                    <button type="button" id="ok-button">OK</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

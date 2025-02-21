@@ -1,0 +1,339 @@
+body {
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 150;
+    font-style: normal;
+    background-color: #FFA6B8;
+    background-image: url('bg_image_2.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+
+}
+
+.container {
+
+    width: 90%; /* Increased width */
+    max-width: 800px; /* Increased max-width */
+    text-align: center;
+    overflow: hidden;
+}
+input::placeholder {
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+
+.question-container {
+    position: relative;
+    padding: 60px; /* Increased padding */
+    background-color: white;
+    border: 3.1px solid #E83A3B;
+    border-radius: 60px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    color: #E83A3B  ;
+}
+
+#question {
+    font-size: 3.5rem; /* Increased question font size */
+    margin-bottom: 60px; /* Increased bottom margin */
+    text-align: left;
+    color: #343a40;
+}
+
+#answer {
+    width: 100%;
+    padding: 20px; /* Increased input padding */
+    margin-bottom: 30px; /* Increased bottom margin */
+    border: none;
+    border-bottom: 4px dotted #343a40 ;
+    font-size: 3rem; /* Increased input font size */
+    color: #343a40;
+    outline: none;
+    background-color: transparent;
+}
+
+#answer::placeholder {
+    color: #E83A3B;
+    font-style: normal;
+    font-size: 3rem; /* Increased placeholder size to match input */
+}
+/* express affection question start */
+
+#radio-container-exp-affection .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-exp-affection .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-exp-affection .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/* express affection question end */
+/*love lang question start*/
+
+#radio-container-love-lang .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-love-lang .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-love-lang .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/*love lang question end*/
+
+/* emotions question start*/
+#radio-container-emotions .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-emotions .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-emotions .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/* emotions question end*/
+/* routine and structure question start*/
+#radio-container-routine-and-structure .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-routine-and-structure .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-routine-and-structure .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/* routine and structure question end*/
+/* stress question start*/
+#radio-container-stress .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-stress .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-stress .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/* stress question end*/
+/* introvert question start*/
+#radio-container-introvert .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+
+#radio-container-introvert .radio-options label {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    gap: 40px; /* Space between radio button and label text */
+}
+
+
+#radio-container-introvert .radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+/* introvert question end*/
+.radio-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.radio-options label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+    appearance: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #E8F0FE;
+    border: 2px solid #E83A3B;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #343a40;
+    transition: all 0.2s ease;
+}
+
+.radio-options input[type="radio"]:checked {
+    background-color: #E83A3B;
+    color: white;
+}
+
+.radio-options input[type="radio"]:hover {
+    background-color: #FFA6B8;
+}
+
+.scale-label {
+    text-align: center;
+    color: #E83A3B;
+    font-style: italic;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .radio-options input[type="radio"] {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .radio-options {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.input-button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ok-button {
+    background-color: #E83A3B;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 20px 30px; /* Increased button padding */
+    border-radius: 60px;
+    cursor: pointer;
+    font-size: 2.5rem; /* Increased button font size */
+    transition: background-color 0.2s ease;
+}
+
+#ok-button:hover {
+    background-color: #E83A3B;
+}
+
+/* Styling for the animation - VERTICAL SLIDE */
+.question-container.slide-out {
+    animation: slideOutVertical 0.5s forwards;
+}
+
+.question-container.slide-in {
+    animation: slideInVertical 0.5s forwards;
+}
+
+@keyframes slideOutVertical {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100%); opacity: 0; }
+}
+
+@keyframes slideInVertical {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .question-container {
+        padding: 40px; /* Adjusted for smaller screens */
+    }
+
+    #question {
+        font-size: 1.2rem; /* Adjusted for smaller screens */
+    }
+    #answer::placeholder {
+        font-size: 1rem; /* Adjusted for smaller screens */
+    }
+
+    #ok-button {
+         padding: 8px 16px; /* Adjusted for smaller screens */
+         font-size: 1rem; /* Adjusted for smaller screens */
+    }
+}
