@@ -51,7 +51,9 @@ const questionTypes_radio = {
     13: 'radio-container-commitment',
     14: 'radio-container-fear'
 };
-
+function proceedToTnC(){
+    window.location.href="t&c.html";
+}
 let currentQuestionIndex = 0;
 const answers = []; 
 function showQuestion() {
@@ -132,6 +134,9 @@ function showQuestion() {
         // Survey is complete
         questionElement.textContent = "Thank you for answering!";
         questionElement.classList.add('thank-you-message');
+        okButton.onclick = function(){
+            window.location.href = "t&c.html";
+        }
         // Hide all input types
         answerInput.style.display = "none";
         radioContainer.style.display = "none";
@@ -144,7 +149,7 @@ function showQuestion() {
         radioContainerRomaticGesture.style.display = 'none';
         radioContainerCommitment.style.display = 'none';
         radioContainerFear.style.display = 'none';
-        okButton.style.display = "none";
+        //okButton.style.display = "none";
 
         // Submit the form with all answers
         submitForm();
