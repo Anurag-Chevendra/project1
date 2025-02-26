@@ -3,8 +3,10 @@ body {
     font-optical-sizing: auto;
     font-weight: 150;
     font-style: normal;
+    background-size: cover;
     background-color: #FFA6B8;
-    background-image: url('bg_image_2.png');
+    background-image: url('new_svg.svg');
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,173 +63,64 @@ input::placeholder {
 }
 /* express affection question start */
 
-#radio-container-exp-affection .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-exp-affection .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-exp-affection .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/* express affection question end */
-/*love lang question start*/
-
-#radio-container-love-lang .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-love-lang .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-love-lang .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/*love lang question end*/
-
-/* emotions question start*/
-#radio-container-emotions .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-emotions .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-emotions .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/* emotions question end*/
-/* routine and structure question start*/
-#radio-container-routine-and-structure .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-routine-and-structure .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-routine-and-structure .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/* routine and structure question end*/
-/* stress question start*/
-#radio-container-stress .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-stress .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-stress .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/* stress question end*/
-/* introvert question start*/
-#radio-container-introvert .radio-options {
-    display: flex;
-    font-weight: 450;
-    flex-direction: column; /* Stack options vertically */
-    align-items: flex-start; /* Align to the left */
-    gap: 25px; /* Space between option rows */
-    margin-left: 10%; /* Center the whole group */
-    margin-bottom: 10%;
-}
-
-
-#radio-container-introvert .radio-options label {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    font-size: 2.5rem; /* Larger font size */
-    gap: 40px; /* Space between radio button and label text */
-}
-
-
-#radio-container-introvert .radio-options input[type="radio"] {
-    margin-bottom: 10px;
-}
-/* introvert question end*/
 .radio-options {
+    display: flex;
+    font-weight: 450;
+    flex-direction: column; /* Stack options vertically */
+    align-items: flex-start; /* Align to the left */
+    gap: 25px; /* Space between option rows */
+    margin-left: 10%; /* Center the whole group */
+    margin-bottom: 10%;
+}
+
+.radio-options label{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    font-size: 2.5rem; /* Larger font size */
+    text-align: left;
+    gap: 40px; /* Space between radio button and label text */
+}
+
+.radio-options input[type="radio"] {
+    margin-bottom: 10px;
+}
+
+
+#radio-container .radio-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 600px;
+    flex-direction: row;
     margin: 0 auto 20px auto;
 }
 
-.radio-options label {
+#radio-container .radio-options label {
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    gap: 15px;
+}
+.radio-options input[type="radio"] {
+    appearance: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #E8F0FE;
+    border: 2px solid #E83A3B;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #343a40;
+    transition: all 0.2s ease;
 }
 
-.radio-options input[type="radio"] {
+#radio-container .radio-options input[type="radio"] {
     appearance: none;
     width: 60px;
     height: 60px;
@@ -337,3 +230,4 @@ input::placeholder {
          font-size: 1rem; /* Adjusted for smaller screens */
     }
 }
+

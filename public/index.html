@@ -9,7 +9,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('bg_image_2.png');
+            background-image: url('new_svg.svg');
+            background-size: cover;
+            background-position: center;
             background-color: #FFA6B8;
             color: #E83A3B;
         }
@@ -17,11 +19,13 @@
         .main-content {
             height: 100vh; /* Full viewport height */
             display: flex;
-            justify-content: center;
+            justify-content: center;    
             align-items: center;
             flex-direction: column;
             padding: 2rem;
+            color: white;
             box-sizing: border-box;
+            position: relative; /* Added for absolute positioning */
         }
         
         .start-button {
@@ -34,6 +38,31 @@
             cursor: pointer;
             margin-top: 20px;
             font-weight: bold;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 3.0s; /* Extra 0.5s delay compared to heading */
+        }
+        
+        .main-heading {
+            text-shadow: white 0px 0px 0px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
+            animation-delay: 2.5s;
+            margin: 0; /* Remove default margins */
+            text-align: center;
+        }
+        
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
         }
         
         .footer {
@@ -70,12 +99,78 @@
             border-top: 1px solid #333;
             font-size: 14px;
         }
+        
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Fade-out animation */
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        
+        /* Loader styles */
+        .loader { 
+            width: 16px; 
+            height: 16px; 
+            border-radius: 50%; 
+            display: block; 
+            margin: 15px auto; 
+            position: relative; 
+            background: #FF3D00; 
+            color: #FFF; 
+            box-shadow: -24px 0, 24px 0; 
+            box-sizing: border-box; 
+            animation: rotation 2s ease-in-out infinite; 
+        } 
+        
+        @keyframes rotation { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+        
+        /* Loader container */
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: fadeOut 0.5s ease-in-out forwards;
+            animation-delay: 2.5s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .loader-text {
+            color: white;
+            font-size: 12px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
+    
     <div class="main-content">
-        <h1>Find Your Vybe</h1><a href = "matching.html">
-        <button class="start-button">Start Vybing</button></a>
+        <!-- Initial loader -->
+        <div class="loader-container">
+            <span class="loader"></span>
+            <span class="loader-text">Powered by Vybe</span>
+        </div>
+        
+        <!-- Main content that appears after loading -->
+        <div class="content-container">
+            <h1 class="main-heading">Find  Your  Vybe</h1>
+            <a href="matching.html">
+                <button class="start-button">Start Vybing</button>
+            </a>
+        </div>
     </div>
     
     <footer class="footer">
@@ -94,20 +189,19 @@
             <div class="footer-links">
                 <h4>Resources</h4>
                 <a href="#">Safe Dating Tips</a>
-                <a href="#">FAQ</a>
                 <a href="#">Trust & Safety</a>
             </div>
             
             <div class="footer-links">
                 <h4>Legal</h4>
                 <a href="#">Security</a>
-                <a href="#">Terms</a>
+                <a href="t&c.html">Terms</a>
                 <a href="#">Privacy</a>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <div>© //to be added</div>
+            <div>© 2025 Vybe. All rights reserved.</div>
             <div>English (US)</div>
         </div>
     </footer>

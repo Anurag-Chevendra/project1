@@ -13,7 +13,19 @@ const radioContainerExpEmotion = document.getElementById('radio-container-exp-af
 const radioContainerRomaticGesture = document.getElementById('radio-container-romantic-gesture');
 const radioContainerCommitment = document.getElementById('radio-container-commitment');
 const radioContainerFear = document.getElementById('radio-container-fear');
-
+const radioContainerPartnerResponse = document.getElementById('radio-container-partner-response');
+const radioContainerRelyPartner = document.getElementById('radio-container-rely-partner');
+const radioContainerTimeApart = document.getElementById('radio-container-time-apart');
+const radioContainerIdealDate = document.getElementById('radio-container-ideal-date');
+const radioContainerCuisine = document.getElementById('radio-container-cuisine');
+const radioContainerDrinker = document.getElementById('radio-container-drinker');
+const radioContainerSmoke = document.getElementById('radio-container-smoke');
+const radioContainerWeekend = document.getElementById('radio-container-weeknd');
+const radioContainerPlanning = document.getElementById('radio-container-planning');
+const radioContainerMostImp = document.getElementById('radio-container-most-imp');
+const radioContainerFam = document.getElementById('radio-container-fam');
+const radioContainerConflict = document.getElementById('radio-container-conflict');
+const radioContainerPolitics = document.getElementById('radio-container-politics');
 const questions = [
     "What is your name?",
     "How old are you?",
@@ -27,9 +39,25 @@ const questions = [
     "How do you express emotions in a relationship?",
     "Which of these means the most to you in a relationship?",
     "How do you like to express affection to your partner?",
-    "What’s your idea of a perfect romantic gesture?",
+    "What's your idea of a perfect romantic gesture?",
     "How do you feel about commitment in relationships?",
-    "What is your greatest fear in relationships?"
+    "What is your greatest fear in relationships?",
+    "When your partner is upset, how do you typically respond?",
+    "Do you feel comfortable relying on your partner emotionally?",
+    "How important is it for you to spend time apart in a relationship?",
+    "If you could choose one ideal date, what would it be?",
+    "What type of cuisine do you enjoy most?",
+    "Do you drink?",
+    "Do you smoke or use any substances?",
+    "How do you spend your weekends?",
+    "Do you prefer planning ahead or being spontaneous in life?",
+    "What are three qualities you value most in a partner?",
+    "What's the most important factor in a relationship for you?",
+    "Do you envision having a family in the future?",
+    "How do you approach conflict in relationships?",
+    "What are your top three personal goals for the next five years?",
+    "How important is it for your partner to share similar political or social beliefs?"
+    
     
 ];
 
@@ -49,7 +77,23 @@ const questionTypes_radio = {
     11: 'radio-container-exp-affection',
     12: 'radio-container-romantic-gesture',
     13: 'radio-container-commitment',
-    14: 'radio-container-fear'
+    14: 'radio-container-fear',
+    15: 'radio-container-partner-response',
+    16: 'radio-container-rely-partner',
+    17: 'radio-container-time-apart',
+    18: 'radio-container-ideal-date',
+    19: 'radio-container-cuisine',
+    20: 'radio-container-drinker',
+    21: 'radio-container-smoke',
+    22: 'radio-container-weeknd',
+    23: 'radio-container-planning',
+    24: 'text',
+    25: 'radio-container-most-imp',
+    26: 'radio-container-fam',
+    27: 'radio-container-conflict',
+    28: 'text',
+    29: 'radio-container-politics'
+
 };
 function proceedToTnC(){
     window.location.href="t&c.html";
@@ -58,6 +102,7 @@ let currentQuestionIndex = 0;
 const answers = []; 
 function showQuestion() {
     if (currentQuestionIndex < questions.length) {
+        
         questionElement.textContent = (currentQuestionIndex + 1) + '. ' + questions[currentQuestionIndex];
         
         // Hide all input containers first
@@ -72,6 +117,19 @@ function showQuestion() {
         radioContainerRomaticGesture.style.display = 'none';
         radioContainerCommitment.style.display = 'none';
         radioContainerFear.style.display = 'none';
+        radioContainerPartnerResponse.style.display = 'none';
+        radioContainerRelyPartner.style.display = 'none';
+        radioContainerTimeApart.style.display = 'none';
+        radioContainerIdealDate.style.display = 'none';
+        radioContainerCuisine.style.display = 'none';
+        radioContainerDrinker.style.display = 'none';
+        radioContainerSmoke.style.display = 'none';
+        radioContainerWeekend.style.display = 'none';
+        radioContainerPlanning.style.display = 'none';
+        radioContainerMostImp.style.display = 'none';
+        radioContainerFam.style.display = 'none';
+        radioContainerConflict.style.display = 'none';
+        radioContainerPolitics.style.display = 'none';
         // Show the appropriate input type based on the question
         const questionType = questionTypes_radio[currentQuestionIndex];
         
@@ -84,8 +142,52 @@ function showQuestion() {
                 radioContainer.style.display = 'block';
                 clearRadioSelection();
                 break;
+            case 'radio-container-conflict':
+                radioContainerConflict.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-fam':
+                radioContainerFam.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-most-imp':
+                radioContainerMostImp.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-cuisine':
+                radioContainerCuisine.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-weeknd':
+                radioContainerWeekend.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-politics':
+                radioContainerPolitics.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-ideal-date':
+                radioContainerIdealDate.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-planning':
+                radioContainerPlanning.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-smoke':
+                radioContainerSmoke.style.display = 'block';
+                clearRadioSelection();
+                break;
             case 'radio_introvert':
                 radioContainer_introvert.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-time-apart':
+                radioContainerTimeApart.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-drinker':
+                radioContainerDrinker.style.display = 'block';
                 clearRadioSelection();
                 break;
             case 'radio_stress_handling':
@@ -102,6 +204,10 @@ function showQuestion() {
                 break;
             case 'radio-container-routine-and-structure' :
                 radioContainerRoutineandstruct.style.display = 'block';
+                clearRadioSelection();
+                break;
+            case 'radio-container-rely-partner':
+                radioContainerRelyPartner.style.display = 'block';
                 clearRadioSelection();
                 break;
             case 'radio-container-emotions':
@@ -128,6 +234,10 @@ function showQuestion() {
                 radioContainerFear.style.display = 'block';
                 clearRadioSelection();
                 break;
+            case 'radio-container-partner-response':
+                radioContainerPartnerResponse.style.display = 'block';
+                clearRadioSelection();
+                break;
 
         }
     } else {
@@ -149,6 +259,19 @@ function showQuestion() {
         radioContainerRomaticGesture.style.display = 'none';
         radioContainerCommitment.style.display = 'none';
         radioContainerFear.style.display = 'none';
+        radioContainerPartnerResponse.style.display = 'none';
+        radioContainerRelyPartner.style.display = 'none';
+        radioContainerTimeApart.style.display = 'none';
+        radioContainerIdealDate.style.display = 'none';
+        radioContainerCuisine.style.display = 'none';
+        radioContainerDrinker.style.display = 'none';
+        radioContainerSmoke.style.display = 'none';
+        radioContainerWeekend.style.display = 'none';
+        radioContainerPlanning.style.display = 'none';
+        radioContainerMostImp.style.display = 'none';
+        radioContainerFam.style.display = 'none';
+        radioContainerConflict.style.display = 'none';
+        radioContainerPolitics.style.display = 'none';
         //okButton.style.display = "none";
 
         // Submit the form with all answers
@@ -161,6 +284,66 @@ function getAnswer() {
     if (questionTypes_radio[currentQuestionIndex] === 'radio') {
         const selectedRadio = document.querySelector('input[name="scale"]:checked');
         answerInput.value = selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-most-imp') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-conflict') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-rely-partner') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-politics') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-fam') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-planning') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-ideal-date') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-weekend') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-cuisine') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-smoke') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-drinker') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-time-apart') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
         console.log(answerInput.value);
     }
     if (questionTypes_radio[currentQuestionIndex] === 'radio_introvert') {
@@ -179,6 +362,11 @@ function getAnswer() {
         console.log(answerInput.value);
     }
     if (questionTypes_radio[currentQuestionIndex] === 'radio_express_emotions') {
+        const selectedRadio = document.querySelector('input[name="scale"]:checked');
+        answerInput.value =  selectedRadio ? selectedRadio.value : null;
+        console.log(answerInput.value);
+    }
+    if (questionTypes_radio[currentQuestionIndex] === 'radio-container-partner-response') {
         const selectedRadio = document.querySelector('input[name="scale"]:checked');
         answerInput.value =  selectedRadio ? selectedRadio.value : null;
         console.log(answerInput.value);
@@ -299,7 +487,22 @@ function submitForm() {
         question12: answers[11],
         question13: answers[12],
         question14: answers[13],
-        question15: answers[14]
+        question15: answers[14],
+        question16: answers[15],
+        question17: answers[16],
+        question18: answers[17],
+        quesiton19: answers[18],
+        question20: answers[19],
+        question21: answers[20],
+        question22: answers[21],
+        question23: answers[22],
+        question24: answers[23],
+        question25: answers[24],
+        question26: answers[25],
+        question27: answers[26],
+        question28: answers[27],
+        question29: answers[28],
+        question30: answers[29]
     };
 
     // Use fetch API to send the data
